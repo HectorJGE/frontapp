@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">FrontApp</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="volver">Volver</string>
+    <string name="agregar">Agregar</string>
+    <string name="borrar">Borrar</string>
+    <string name="errorAmbos">Debe haber al menos un doctor y paciente</string>
+    <string name="errorNoPacientes">Debe haber al menos un paciente</string>
+    <string name="errorNoDoctores">Debe haber al menos un doctor</string>
+
+
+    <!-- Menu principal -->
+    <string name="menu">Sistema de registro de pacientes</string>
+    <string name="btnIrCategorias">Ir a Categorías</string>
+    <string name="btnIrPersonas">Ir a Pacientes/Doctores</string>
+    <string name="btnIrReservas">Reserva de Turnos</string>
+    <string name="btnIrFichasClinicas">Fichas Clínicas</string>
+
+
+    <!-- Vista de categorías -->
+    <string name="textoListaCategorias">Lista de Categorías</string>
+    <string name="textoIrAgregarCategoria">Agregar categoría</string>
+    <string name="textoNoHayCategorias">No existen categorías</string>
+    <!-- Vista de agregar categorías -->
+    <string name="textoAgregarCategoria">Introduzca el nombre</string>
+
+
+    <!-- Vista de personas -->
+    <string name="textoListaPersonas">Lista de Personas</string>
+    <string name="textoIrAgregarPersona">Agregar persona</string>
+    <string name="textoNoHayPersonas">No existen personas</string>
+    <!-- Vista de agregar personas -->
+    <string name="textoAgregarNombre">Nombre:</string>
+    <string name="textoAgregarApellido">Apellido:</string>
+    <string name="textoAgregarTelefono">Télefono:</string>
+    <string name="textoAgregarEmail">E-mail:</string>
+    <string name="textoAgregarCedula">Cedula:</string>
+    <string name="textoAgregarEsDoctor">¿Es doctor?</string>
+
+
+    <!-- Vista de reservas -->
+    <string name="textoListaReservas">Lista de Reservas</string>
+    <string name="textoIrAgregarReserva">Agregar reserva</string>
+    <string name="textoNoHayReservas">No existen reservas</string>
+
+    <!-- Vista de fichas -->
+    <string name="textoListaFichas">Lista de Fichas</string>
+    <string name="textoIrAgregarFicha">Agregar ficha</string>
+    <string name="textoNoHayFicha">No existen fichas</string>
+
+    <!-- Vista de seleccionar paciente -->
+    <string name="textoSeleccionePaciente">Seleccione un paciente:</string>
+    <!-- Vista de seleccionar paciente -->
+    <string name="textoSeleccioneDoctor">Seleccione un doctor:</string>
+    <!-- Vista de seleccionar fecha y hora -->
+    <string name="textoSeleccioneFecha">Seleccione una fecha: </string>
+    <string name="textoSeleccioneHora">Seleccione una hora: </string>
+
+
+</resources>

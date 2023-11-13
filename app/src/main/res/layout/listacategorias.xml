@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="6dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rvTextoID"
+            android:layout_alignParentTop="true"
+            android:textSize="16sp"
+            android:lines="1"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rvTextoDescripcion"
+            android:layout_below="@+id/rvTextoID"
+            android:textSize="16sp"
+            android:lines="1"
+            android:textStyle="bold" />
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/borrar"
+            android:onClick="btnEventoBorrarCategoria"
+            android:layout_below="@+id/rvTextoDescripcion"
+            android:layout_alignParentRight="true"
+            android:lines="1"
+            android:textSize="16sp"
+            android:id="@+id/btnBorrarCategoria"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

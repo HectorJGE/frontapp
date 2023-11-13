@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".personas.AgregarPersonaActivity">
+
+    <!-- NOMBRE -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textoAgregarNombre"
+        android:textStyle="bold"/>
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="3dp"
+        android:inputType="text"
+        android:id="@+id/campoNombrePersona" />
+
+    <!-- APELLIDO -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textoAgregarApellido"
+        android:textStyle="bold"/>
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="3dp"
+        android:inputType="text"
+        android:id="@+id/campoApellidoPersona" />
+
+    <!-- TELEFONO -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textoAgregarTelefono"
+        android:textStyle="bold"/>
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="3dp"
+        android:inputType="text"
+        android:id="@+id/campoTelefonoPersona" />
+
+    <!-- EMAIL -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textoAgregarEmail"
+        android:textStyle="bold"/>
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="3dp"
+        android:inputType="text"
+        android:id="@+id/campoEmailPersona" />
+
+    <!-- CEDULA  -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textoAgregarCedula"
+        android:textStyle="bold"/>
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="3dp"
+        android:inputType="text"
+        android:id="@+id/campoCedulaPersona" />
+
+    <!-- ES DOCTOR -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textoAgregarEsDoctor"
+        android:textStyle="bold"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sí"
+        android:id="@+id/checkboxEsDoctor"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/agregar"
+        android:onClick="btnEventoGuardarPersona" />
+
+
+</LinearLayout>
