@@ -43,11 +43,6 @@
     <string name="textoIrAgregarReserva">Agregar reserva</string>
     <string name="textoNoHayReservas">No existen reservas</string>
 
-    <!-- Vista de fichas -->
-    <string name="textoListaFichas">Lista de Fichas</string>
-    <string name="textoIrAgregarFicha">Agregar ficha</string>
-    <string name="textoNoHayFicha">No existen fichas</string>
-
     <!-- Vista de seleccionar paciente -->
     <string name="textoSeleccionePaciente">Seleccione un paciente:</string>
     <!-- Vista de seleccionar paciente -->
@@ -55,6 +50,10 @@
     <!-- Vista de seleccionar fecha y hora -->
     <string name="textoSeleccioneFecha">Seleccione una fecha: </string>
     <string name="textoSeleccioneHora">Seleccione una hora: </string>
+
+    <string name="textoListaFichas">Lista de Fichas</string>
+    <string name="textoIrAgregarFicha">Agregar ficha</string>
+    <string name="textoSeleccioneReserva">Seleccione una reserva:</string>
 
 
 </resources>

@@ -13,6 +13,12 @@
         android:theme="@style/Theme.FrontApp"
         tools:targetApi="31">
         <activity
+            android:name=".fichas.AgregarFichaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".fichas.FichasActivity"
+            android:exported="false" />
+        <activity
             android:name=".reservas.AgregarFechaReservaActivity"
             android:exported="false" />
         <activity
@@ -24,8 +30,7 @@
         <activity
             android:name=".reservas.ReservasActivity"
             android:exported="false" />
-        <activity
-            android:name=".personas.AgregarPersonaActivity"
+        <activity            android:name=".personas.AgregarPersonaActivity"
             android:exported="false" />
         <activity
             android:name=".personas.PersonasActivity"

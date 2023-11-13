@@ -21,6 +21,14 @@ public class Reserva {
         this.hora = hora;
     }
 
+    public Reserva() {
+        this.idReserva = 0;
+        this.paciente = null;
+        this.doctor = null;
+        this.fecha = null;
+        this.hora = "";
+    }
+
     public int getIdReserva() {
         return idReserva;
     }

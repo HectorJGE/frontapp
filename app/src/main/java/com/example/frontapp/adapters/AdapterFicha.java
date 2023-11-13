@@ -11,9 +11,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.frontapp.R;
 import com.example.frontapp.clases.Ficha;
+import com.example.frontapp.clases.Reserva;
+
+import org.w3c.dom.Text;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -35,7 +39,7 @@ public class AdapterFicha extends RecyclerView.Adapter<AdapterFicha.ViewHolder>{
     @Override
     public AdapterFicha.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.listareservas, parent, false);
+                .inflate(R.layout.listafichas, parent, false);
         AdapterFicha.ViewHolder pvh = new AdapterFicha.ViewHolder(v);
 
         pvh.btnBorrar.setOnClickListener(new View.OnClickListener() {
@@ -62,11 +66,11 @@ public class AdapterFicha extends RecyclerView.Adapter<AdapterFicha.ViewHolder>{
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         String fechaEnFormatoDDMMYYYY = sdf.format(ficha.getFecha().getTime());
-
         holder.tvFecha.setText("Fecha: " + fechaEnFormatoDDMMYYYY);
-        holder.tvCategoria.setText("Categoria: " + ficha.getCategoria().toString());
-        holder.tvMotivo.setText("Motivo: " + ficha.getMotivo_consulta().toString());
-        holder.tvDiagnostico.setText("Diagnostico: " + ficha.getDiagnostico().toString());
+
+        holder.tvCategoria.setText("Categoria: " + ficha.getCategoria().getDescripcion());
+        holder.tvMotivo.setText("Motivo consulta: " + ficha.getMotivo_consulta());
+        holder.tvDiagnostico.setText("Diagnostico: " + ficha.getDiagnostico());
     }
 
     @Override
@@ -85,14 +89,14 @@ public class AdapterFicha extends RecyclerView.Adapter<AdapterFicha.ViewHolder>{
         public Button btnBorrar;
         public ViewHolder (View v){
             super(v);
-            tvID = v.findViewById(R.id.rvTextoIDReserva);
-            tvPaciente = v.findViewById(R.id.rvTextoPacienteReserva);
-            tvDoctor = v.findViewById(R.id.rvTextoDoctorReserva);
-            tvFecha = v.findViewById(R.id.rvTextoFechaReserva);
-            tvCategoria = v.findViewById(R.id.rvTextoHoraReserva);
-            tvMotivo = v.findViewById(R.id.rvTextoHoraReserva);
-            tvDiagnostico = v.findViewById(R.id.rvTextoHoraReserva);
-            btnBorrar = v.findViewById(R.id.btnBorrarReserva);
+            tvID = v.findViewById(R.id.rvTextoIDFicha);
+            tvPaciente = v.findViewById(R.id.rvTextoPacienteFicha);
+            tvDoctor = v.findViewById(R.id.rvTextoDoctorFicha);
+            tvFecha = v.findViewById(R.id.rvTextoFechaFicha);
+            tvCategoria = v.findViewById(R.id.rvTextoCategoriaFicha);
+            tvMotivo = v.findViewById(R.id.rvTextoMotivoConsultaFicha);
+            tvDiagnostico = v.findViewById(R.id.rvTextoDiagnosticoFicha);
+            btnBorrar = v.findViewById(R.id.btnBorrarFicha);
         }
     }
 
@@ -100,6 +104,18 @@ public class AdapterFicha extends RecyclerView.Adapter<AdapterFicha.ViewHolder>{
         this.dataFicha = listaFichas;
         listaOriginal = new ArrayList<>();
         listaOriginal.addAll(dataFicha);
+    }
+    public void filtrarPorFecha(Calendar fDesde, Calendar fHasta){
+        dataFicha.clear();
+        dataFicha.addAll(listaOriginal);
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+            List<Ficha> colleccion = dataFicha.stream()
+                    .filter(i -> i.getFecha().after(fDesde) && i.getFecha().before(fHasta) )
+                    .collect(Collectors.toList());
+            dataFicha.clear();
+            dataFicha.addAll(colleccion);
+        }
+        notifyDataSetChanged();
     }
 
     public void filtrado( String txtBuscar, Boolean doctor){

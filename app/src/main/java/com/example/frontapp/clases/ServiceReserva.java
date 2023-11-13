@@ -20,4 +20,12 @@ public class ServiceReserva {
     public ArrayList<Reserva> obtenerReservas() {
         return reservas;
     }
+    public Reserva obtenerReservaPorID(int id){
+        for(Reserva r : reservas){
+            if(r.getIdReserva() == id){
+                return r;
+            }
+        }
+        return new Reserva();
+    }
 }
